@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<h1>User Management</h1>
+
+<body>
+        <section>   
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newUserModal">
+                Create new user
+            </button>
+        </section>
+
+        <!-- Modal popup -->
+        
+<div class="modal fade" id="newUserModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Create User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label>username</label>
+          <input type="text" id="username" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>password</label>
+          <input type="password" id="password" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label>role</label>
+          <input type="text" id="role" class="form-control">  
+      </div>
+      <div class="mb-3">
+          <label>product access</label>
+          <input type="text" id="productAccess" class="form-control">
+    </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-success" onclick="submitUser()">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+        <!-- end of popup -->
+<h12>list of Users</h1>
+  <table>
+    <thead>
+        <tr>
+
+            <th th:each="header : ${headers}" th:text="${header}">header</th>
+        </tr>
+       
+    </thead>
+     <thead>
+                
+        <tr th:each="user : ${userData}">
+            <td th:text="${user.username}">Username</td>
+
+
+            <td>
+        <span th:text="${user.productAccess}"
+              th:attr="data-username=${user.username}"
+              onclick="editProduct(this)"></span>
+       </td>
+
+    <!-- Role (click to edit) -->
+    <td>
+        <span th:text="${user.role}"
+              th:attr="data-username=${user.username}"
+              onclick="editRole(this)"></span>
+     </td>
+    <td>
+        <button th:attr="data-username=${user.username}"
+                onclick="updateRow(this)">
+            Update
+        </button>
+    </td>
+            
+        </tr>
+       
+    </thead>
+       
+</table>
+</body> 
+
+
+
+
+
+<script>
+
+<!-- JavaScript functions for editing role and product access -->
+
+let editedData = {}; // { username: { role: "...", productAccess: "..." } }
+
+function editRole(el) {
+    const username = el.getAttribute("data-username");
+
+    const select = document.createElement("select");
+    const roles = ["PM","ADMIN","VIEWER","CONTRIBUTOR","ENGINEER"];
+
+    roles.forEach(r => {
+        let opt = document.createElement("option");
+        opt.value = r;
+        opt.text = r;
+        select.appendChild(opt);
+    });
+
+    select.onchange = function () {
+        if (!editedData[username]) editedData[username] = {};
+        editedData[username].role = this.value;
+    };
+
+    el.replaceWith(select);
+}
+
+
+
+function editProduct(el) {
+    const username = el.getAttribute("data-username");
+
+    fetch("/api/view-products")
+        .then(res => res.json())
+        .then(products => {
+
+            const select = document.createElement("select");
+
+            products.forEach(p => {
+                let opt = document.createElement("option");
+                opt.value = p.name;
+                opt.text = p.name;
+                select.appendChild(opt);
+            });
+
+            select.onchange = function () {
+                if (!editedData[username]) editedData[username] = {};
+                editedData[username].productAccess = this.value;
+            };
+
+            el.replaceWith(select);
+        });
+}
+
+
+function updateRow(btn) {
+
+    const username = btn.getAttribute("data-username");
+    const data = editedData[username];
+
+    if (!data) {
+        alert("No changes made");
+        return;
+    }
+
+    fetch("/api/update-user-role", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username: username,
+            role: data.role,
+            productAccess: data.productAccess
+        })
+    })
+    .then(res => res.text())
+    .then(() => {
+        alert("Updated successfully");
+        location.reload();
+    });
+}
+
+
+function submitUser() {
+
+    const user = {
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+        role: document.getElementById("role").value,
+        productAccess: document.getElementById("productAccess").value
+    };
+
+    fetch('/api/create-user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(response => response.json())
+    .then(success => {
+      if (success) {
+        alert("User Created Successfully");
+
+        // clear fields
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("role").value = "";
+        document.getElementById("productAccess").value = "";
+
+        // close modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('newUserModal'));
+        modal.hide();
+
+        // reload page (optional)
+        location.reload();} else {
+            alert("Failed to create user");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+</script>
+
+
+</html> 

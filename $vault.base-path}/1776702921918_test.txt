@@ -1,0 +1,277 @@
+	0-100k in bug bounty along 9-5 job				
+		Follow Twitter account @techycodec08 and update in sheet daily			
+DATE	DAYS	Activity	Status	Remarks	time
+18-12-2024	Day-1	"Started with Web Application Hackers Handbook.
+Learned about:
+1. How Web Applications have evolved.
+2. Various Web Defense Mechanisms.
+3. HTTP and various server and client side technologies used"	completed		8
+30-12-2024	Day 2	"Learned About: 
+1. More client and server side technologies 
+2. Various encoding and decoding schemes 
+3. Mapping the Application for information
+ 4. Identifying Server Side Technologies."	completed	started with owasp top fingerprinting web application framworks	
+08-01-2025	Day 3	started learing about http1.0	Completed	"MDN HTTp study completed on 16-Jan
+ "	2Hrs
+16-01-2025	Day-4	"how web browser works
+how html,css rendering works, js
+web browser architecture."	completed	one note refercences	1hr
+19-01-2025	Day-5	"1.Browser Security Features
+		
+		
+		
+		3. Extensions and Plugins
+		
+		
+		4. Network Security
+		
+		5. Browser Fingerprinting
+		"	completed		1hr
+21-01-2025	Day  5	"Today I learned about:
+1. How the internet works
+2. Basics of HTML and CSS
+3. Coding in JS
+4. JS event handlers
+5. DOM
+6. What is CSP and SOP (basic)"	completed		3 1/2
+	Day 5 & 6	s	in-completed	js need to learn from starting	
+"27-01-2025
+again started in 10-feb-25"	Day 6	"API
+1.RESTful api
+2.SOAP 
+3.GraphQL
+4. Authentication & Authorization
+5.WebSocket APIs
+6.Server-Sent,sds,d,s Events (SSE)
+7.File Upload APIs 
+8. Payment APIs
+9. Email APIs
+10. Content Management Systems (CMS)
+11. Microservices Architecture
+12. Web Frameworks
+13. Server-Side Rendering (SSR) Frameworks
+14.Cloud Services and APIs
+15. Third-Party APIs
+16.Content Delivery Networks (CDNs)"	not requirted now	"GraphQL learning is done
+Webscoket done
+payment api & email apis are need to learn
+CMS in completed."	3hrs+30+30mint
+"13-02-2025
+17-FEB
+17-MAR"	Day 7	"read book and update here
+Learned about:
+1. Authentication bypass
+2. Design and implement flaws
+3. User/Pass bypass
+4. MFA bypass
+5. Brute-forcing and Enumeration
+
+Resources: 
+1. Web App Hackers Handbook
+2. Portswigger"	completed		
+07-Apr-25	Day 8	Starting reading and practicing A01 Broken Access Control-->OWASP TOP 10 in one note.	in progress		
+	Day 9	"
+Went through dozens of Blogs, Write-ups, Hactivity and Disclosed reports for various Auth related bugs, including OAuth and explored different ways to bypass them.
+
+Resources:
+1. Hactivity
+2. App-Sec Cheat Sheet"			
+	Day 10	"Went through a lot of Hactivity reports regarding the following topics
+1. Access Contol/IDOR
+2. Priv Esc
+3. Auth
+
+I heard the podcast of @gregxsunday
+ with @ArchAngelDDay
+ on BBRE about Priv Esc bugs"			
+	Day 11	"
+Made a list of different Authentication Bug types which I can follow as a checklist while hunting for Auth bugs in real world targets.
+Attacks types
+1. Email verification 
+2. Password/OTP verification 
+3. Rate limiting 
+@Rhynorater"			
+	Day 12	"
+Started Hunting for Authentication bugs on http://Trello.com which is an Atlassian Product
+
+Tested for the Email Change Functionality but had no luck today.
+
+Will keep hunting for 100 hours and then change domain
+
+@Rhynorater"			
+	Day 13	"Continued hunting on http://Trello.com
+Looked for more Authentication bugs related to
+1. Email Confirmation
+2. User Login/Signup
+3. Session Mangement
+
+No luck today as well, but I know I will make it someday."			
+	DAY 14	"Spent the whole day on several blogs and reports related to Authentication Bypass
+
+1. OTP/MFA bypass
+2. Password bypass
+3. Email verification bypass
+
+Went through almost 100 articles on Auth bypass"			
+	Day 15	"Started learning about OAuth and OpenId connect
+
+1. Different OAuth Flows/Grant types
+2. Different OAuth endpoints
+3. Code and Access token
+4. Use of Different OAuth Parameters
+5. OpenID connect flows and parameters
+
+@Rhynorater"			
+	Day 16	"Continued learning about OAuth and OpenID Connect protocols and different ways to exploit them, including
+
+1. Open-redirect via Redirect_URI
+2. SSRF via OpenID
+3. CSRF via State param
+4. OAuth misconfiguration to ATO"			
+	Day 17	"Started testing for OAuth related bugs on a program in bugcrowd.
+
+Tested the Google OAuth service for various scenarios:
+
+1. State Param for CSRF
+2. OAuth Misconfig for ATO
+3. Redirect_Uri for Token Leakage"			
+	Day 18	"
+Started learning about Open-Redirect as many attacks like OAuth and SSRF need you to know how to bypass the white or black listing for URL Redirection.
+
+I read around 80 reports today
+Will continue with the same tomorrow."			
+	day 19	"Will keep hunting for more OAuth bugs tomorrow.
+
+Also many people were asking for the resources I used to learn about OAuth, so here they are:
+
+1. App-Sec Cheat Sheet: https://0xn3va.gitbook.io/cheat-sheets/web-application/oauth-2.0-vulnerabilities
+2. Portswigger: https://portswigger.net/web-security/oauth
+3. Reports: https://github.com/reddelexc/hack"			
+	day 20	"Reference Material For IDOR
+
+1. Portswigger: https://portswigger.net/web-security/access-control/idor
+2. OWASP: https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html
+3. PayLoadAllThings: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Insecure%20Direct%20Object%20References
+4. HackTricks: https://book.hacktricks.xyz/pentesting-web/idor
+5. Bugcrowd: https://bugcrowd.com/blog/how-to-find-idor-insecure-direct-object-reference-vulnerabilities-for-large-bounty-rewards/
+6. HowToHunt: https://kathan19.gitbook.io/howtohunt/idor"			
+	day 21	"Also learnt about some automation tools for finding IDOR
+
+1. BurpSuite Auth Analyzer and Autorize: https://tevora.com/threat-blog/finding-broken-access-controls/?cn-reloaded=1
+2. BurpSuite AutoRepeater and Autorize: https://youtube.com/watch?v=3K1-a7dnA60
+3. BurpSuite Auth Matrix
+4. ParamMiner  - To find Hidden Parameters: https://mokhansec.medium.com/full-account-t
+earnt some new ways to exploit IDOR Vulnerabilities
+
+1. MongoDB ObjectIDs based IDOR: https://techkranti.com/idor-through-mongodb-object-ids-prediction/
+2. Blind IDOR: https://nobugescapes.com/blog/blind-insecure-direct-object-reference-idor-leads-to-export-other-users-data/
+3. Second Order IDOR: https://ozguralp.medium.com/a-less-known-attack-vector-second-order-idor-attacks-14468009781a
+4. SELF_XSS to IDOR: https://infosecwriteups.com/idor-that-allowed-me-to-takeover-any-users-account-129e55871d8
+5. IDOR + CSRF: https://shahjerry33.medium.com/csrf-with-idor"			
+		"MORE IDOR RESOURCES
+
+1. How To Find More IDORs: https://vickieli.medium.com/how-to-find-more-idors-ae2db67c9489
+2. Tale of 7 IDORs: https://medium.com/@pratyush1337/the-art-of-idor-7-idors-in-edm0d0-b86d683c8de9
+3. IDOR hands on tutorial: https://thehackerish.com/idor-tutorial-hands-on-owasp-top-10-training/
+4. IDOR on AIRBNB by @NahamSec
+: https://buer.haus/2017/03/31/airbnb-web-to-app-phone-notification-idor-to-view-everyones-airbnb-messages/
+5. 12 IDOR bugs in one Program: https://codeburst.io/hunting-insecu"			
+		"IDOR + Blind XSS to access Internal Slack: https://ansariosama.com/2017/11/how-i-pwned-company-using-idor-blind-xss.html
+IDOR + Stores XSS ATO: https://medium.com/@pratiky054/account-takeover-unraveling-idor-stored-xss-flaws-in-an-nft-marketplace-158679660fa7
+IDOR + HPP: https://fortbridge.co.uk/research/idor-exploitation-via-hpp-api-hacking-case-study/
+Bypassing IDOR Fixes: https://medium.com/@bxrowski0x/bypassing-an-idor-a-couple-of-times-4d67555a1545
+IDOR Via TimeStamp: https://medium.com/@0x_xnum/idor-leads-to-account-takeover-of-all-users-ato-27af312c8481
+IDOR in Zomato: https://prateeksrivastavaa.medium.com/zomatoooo-idor"			
+	day 22	"Deev Pal
+@techycodec08
+·
+Dec 1
+Day 49: 0-100k in bug bounty with a 9-5 job
+
+Spent the entire day reading reports and articles on Broken Access Control and Privilege Escalation issues.
+
+Went through 50+ reports and slowly started building my attack methodologies/checklist for Priv Escs hunting.
+
+@Rhynorater
+Image
+Deev Pal
+@techycodec08
+·
+Dec 1
+Some Privilege Escalation Resources:
+1. BAC + Blind XSS: https://sudhanshukashyap123.medium.com/chaining-self-blind-xss-with-broken-access-control-to-make-it-non-self-blind-xss-626a70c8bbc7
+
+2. BAC led to AWS S3 buckets: https://infosecwriteups.com/s3-bucket-misconfigured-access-controls-to-critical-vulnerability-6b535e3df9a5
+3. BAC led to Admin Acc without Password in WP sites: https://shahjerry33.medium.com/privilege-escalation-hello-admin-a53ac14fd388
+4. Improper Access Control In GitLab: https://rpadovani.com/gitlab-responsible-disclosure
+sudhanshukashyap123.medium.com
+Chaining Self Blind XSS with Broken Access Control To Make it Non Self Blind XSS
+okay so the first thing it is not gonna be a fancy write up as i am running out of time, but definitely excited for this vulnerability so…
+Deev Pal
+@techycodec08
+·
+Nov 30
+Day 48: 0-100k in bug bounty with a 9-5 job
+
+Have been following @ArchAngelDDay
+ and his methodologies for Priv Esc and IDORs from last 2 days, which is as simple as ""Find The No's"".
+
+He has some incredible ideas for Priv Esc and would really love to have a conversation with you.
+Image
+Deev Pal
+@techycodec08
+·
+Nov 30
+Some More Priv Esc Resources
+
+1. IDORs and Access Control Violation Part 1 and 2 by @rs0n_live
+ : https://youtu.be/jTdqM2aO4Ys?si=fj8Blrnzc9I2zR9Z
+
+2. @ArchAngelDDay
+ Presentation at NahamCom: https://youtu.be/G1RHa7l1Ys4?si=OF3onSFFa9LD-7YE
+3. @ArchAngelDDay
+ Interview by @NahamSec
+ : https://youtu.be/W93oH_bTgmE?si=vXpiSpHPqvBuf_cq
+youtube.com
+[Part II] Bug Bounty Hunting for IDORs and Access Control Violations
+Now that we understand how to test the boundaries of an application for IDORs, now we will do the same for hunting Access Control Violations. For today's vi...
+Deev Pal
+@techycodec08
+·
+Nov 29
+Day 47: 0-100k in Bug Bounty with a 9-5 job
+
+After completing my hunt for IDORs, I Started Learning About Privilege Escalation bug class
+
+1. Vertical Priv Esc
+2. Horizontal Priv Esc
+3. Context Defined Priv Esc
+4. Mass Assignment
+5. 403/401 Bypasses
+
+For Resources??
+@Rhynorater
+Show more
+Image
+Deev Pal
+@techycodec08
+·
+Nov 29
+Some Priv Esc Resources:
+
+1. Top Priv Esc by @gregxsunday
+ : https://youtube.com/watch?v=fpW-h9uT6Uo
+
+2. @gregxsunday
+ podcast with @ArchAngelDDay
+ : https://youtube.com/watch?v=-YzAwKRMXK0
+3. 401/403 Bypass: https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses
+4. Portswigger: https://portswigger.net/web-security/access-control
+5. Mass Assignment: https://0xn3va.gitbook.io/cheat-sheets/f"			
+		"After completing my hunt for IDORs, I Started Learning About Privilege Escalation bug class
+
+1. Vertical Priv Esc
+2. Horizontal Priv Esc
+3. Context Defined Priv Esc
+4. Mass Assignment
+5. 403/401 Bypasses"			
