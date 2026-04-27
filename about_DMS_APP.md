@@ -1,4 +1,4 @@
-it is simple document mangement tool
+it is simple document mangement tool & a
 
 Features
 ========
@@ -12,3 +12,4 @@ Roles
 ADMIN => only admin,can manages the roles and create products
 PM(Product Manager) => can create product and create document
 Contributor or Enigneer => only access the product and the document
+
