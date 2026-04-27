@@ -62,9 +62,6 @@ Multiple sessions are created for the same user. Old sessions are not invalidate
 ## Impact
 Session hijacking and reuse of old sessions.
 
-## Proof of Concept
-
-![Session Cookie](screenshots/session-jsessionid.png)
 
 ---
 
